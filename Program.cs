@@ -6,21 +6,20 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int number1;
-            int number2;
+            Console.WriteLine("veuillez renseigner votre age : ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("etes vous un homme ou une femme ? ");
+            string sexe = Console.ReadLine();
 
-            Console.WriteLine("veuillez entrer la premiere valeur");
-            number1 = Convert.ToInt32(Console.ReadLine());
+            if (age > 18)
+            {
+                Console.WriteLine($"vous etes {sexe} et vous etes majeur ");
+            }
 
-            Console.WriteLine("veuillez entrer la deuxieme valeur");
-            number2 = Convert.ToInt32(Console.ReadLine());
-
-
-            int sum1 = number1 + 33;
-            int increm = ++number2;
-            int result = sum1 / increm;
-
-            Console.WriteLine("le resultat de l'opération est "+result);
+            else
+            {
+                Console.Write($"vous etes {sexe} et vous etes mineur ");
+            }
             
 
             
